@@ -2,28 +2,29 @@ import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Events = () => {
   const upcomingEvents = [
     {
       id: 1,
-      title: "Digital Transformation Workshop",
-      date: "March 15, 2024",
-      time: "9:00 AM - 5:00 PM",
-      location: "Main Campus",
-      type: "Workshop",
+      title: "Allied Skills Training Centre launch",
+      date: "October 1st, 2025",
+      time: "10:00 AM - 4:00 PM",
+      location: "Allied Skills Centre, Fordsburg",
+      type: "Launch",
       price: "Free",
-      description: "Learn how digital technologies are reshaping industries and discover strategies for successful digital transformation.",
+      description: "Join us for the official launch of our Skills Centre, featuring live demonstrations of our programs.",
       capacity: "50 attendees",
       featured: true
     },
     {
       id: 2,
-      title: "Career Fair 2024",
-      date: "March 22, 2024",
+      title: "Career day 2025",
+      date: "October 20, 2025",
       time: "10:00 AM - 4:00 PM",
-      location: "Exhibition Hall",
-      type: "Career Fair",
+      location: "Allied Skills Centre, Fordsburg",
+      type: "Career Day",
       price: "Free",
       description: "Connect with top employers and explore exciting career opportunities across various industries.",
       capacity: "200 attendees",
@@ -31,51 +32,35 @@ const Events = () => {
     },
     {
       id: 3,
-      title: "AI & Machine Learning Seminar",
-      date: "April 5, 2024",
+      title: "Market day",
+      date: "October 25, 2025",
       time: "2:00 PM - 6:00 PM",
-      location: "Technology Center",
-      type: "Seminar",
-      price: "R49",
-      description: "Explore the latest trends in AI and machine learning with industry experts and hands-on demonstrations.",
+      location: "Allied Skills Centre, Fordsburg",
+      type: "Workshop",
+      price: "R20",
+      description: "Join us for a vibrant showcase of local talents and skills featuring stalls, opportunities to connect, learn and support our community.",
       capacity: "75 attendees",
       featured: false
     },
     {
       id: 4,
       title: "Entrepreneurship Bootcamp",
-      date: "April 12-14, 2024",
+      date: "October 30, 2025",
       time: "9:00 AM - 5:00 PM",
-      location: "Innovation Hub",
+      location: "Allied Skills Centre, Fordsburg",
       type: "Bootcamp",
-      price: "R299",
-      description: "3-day intensive program covering business planning, funding strategies, and startup essentials.",
+      price: "Free",
+      description: "An intensive program covering business planning, funding strategies, and startup essentials.",
       capacity: "30 attendees",
       featured: false
     }
   ];
 
-  const pastEvents = [
-    {
-      title: "Cybersecurity Awareness Day",
-      date: "February 28, 2024",
-      attendees: 120
-    },
-    {
-      title: "Women in Tech Conference",
-      date: "February 14, 2024",
-      attendees: 200
-    },
-    {
-      title: "Industry Panel Discussion",
-      date: "January 30, 2024",
-      attendees: 85
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+      <WhatsAppFloat />
       
       <main className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
@@ -109,20 +94,7 @@ const Events = () => {
                   </div>
                 </CardHeader>
                 
-                <CardContent>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {event.description}
-                  </p>
-                  
-                  <div className="space-y-3">
-                    <Button className="w-full bg-gradient-to-r from-primary to-primary-glow hover:shadow-elegant transition-all duration-300">
-                      Register Now
-                    </Button>
-                    <Button variant="outline" className="w-full">
-                      Learn More
-                    </Button>
-                  </div>
-                </CardContent>
+                
               </Card>
             ))}
           </div>
@@ -147,14 +119,7 @@ const Events = () => {
                   </div>
                 </CardHeader>
                 
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    {event.description}
-                  </p>
-                  <Button variant="outline" size="sm" className="w-full">
-                    View Details
-                  </Button>
-                </CardContent>
+               
               </Card>
             ))}
           </div>
@@ -162,15 +127,10 @@ const Events = () => {
 
         {/* Past Events */}
         <div className="bg-gradient-to-r from-primary/5 to-primary-glow/10 rounded-xl p-8">
-          <h2 className="text-3xl font-semibold text-foreground mb-8 text-center">Recent Events</h2>
+          <h2 className="text-3xl font-semibold text-foreground mb-8 text-center">Past Events</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            {pastEvents.map((event, index) => (
-              <div key={index} className="text-center">
-                <h3 className="text-lg font-semibold text-foreground mb-2">{event.title}</h3>
-                <p className="text-muted-foreground mb-1">{event.date}</p>
-                <p className="text-primary font-semibold">{event.attendees} attendees</p>
-              </div>
-            ))}
+            
+            
           </div>
         </div>
 

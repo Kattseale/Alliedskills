@@ -2,7 +2,8 @@ import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import heroTraining from "@/assets/hero-training.jpg";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
+import skillsimage from "@/assets/skillsimage.png";
 
 const Index = () => {
   const stats = [
@@ -36,6 +37,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
+      <WhatsAppFloat />
       
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/5 to-primary-glow/15 py-20 overflow-hidden">
@@ -66,9 +68,9 @@ const Index = () => {
             
             <div className="relative">
               <img 
-                src={heroTraining} 
+                src={skillsimage} 
                 alt="Professional training center with diverse students learning"
-                className="rounded-xl shadow-elegant w-full h-auto"
+                className="rounded-xl shadow-elegant w-600px h-auto"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-xl"></div>
             </div>
@@ -356,19 +358,19 @@ const Index = () => {
               <h4 className="font-semibold mb-4">Contact</h4>
               <div className="space-y-2 text-white/80">
                 <p>📧 alliedskills.co.za</p>
-                <p>📧 info@newdomain.com</p>
+                <p>📧 info@alliedskills.co.za</p>
                 <p>📞 0687211598</p>
-                <p>📍 123 Training Center Drive</p>
+                <p>📍 Fordsburg</p>
               </div>
             </div>
             
             <div>
               <h4 className="font-semibold mb-4">Follow Us</h4>
               <div className="flex space-x-4">
-                <Button size="sm" variant="outline" className="border-white/20 text-white hover:bg-white/10">
-                  LinkedIn
+                <Button size="sm" variant="outline" className="border-white/20 text-blue :bg-white/10">
+                  Facebook
                 </Button>
-                <Button size="sm" variant="outline" className="border-white/20 text-white hover:bg-white/10">
+                <Button size="sm" variant="outline" className="border-white/20 text-white :bg-white/10">
                   Twitter
                 </Button>
               </div>

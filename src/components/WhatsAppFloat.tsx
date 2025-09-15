@@ -3,7 +3,7 @@ import React from 'react';
 // A self-contained WhatsApp icon component using SVG
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
+    xmlns="https://img.icons8.com/color/48/whatsapp--v1.png"
     viewBox="0 0 448 512"
     {...props}
   >
